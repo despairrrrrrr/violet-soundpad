@@ -28,18 +28,3 @@ Violet Soundpad — звуковая панель для Windows. Она отп�
 ```
 
 При необходимости передайте путь к `ISCC.exe` параметром `-InnoCompiler`. Готовый установщик появится в папке `artifacts`.
-
-## Публикация на GitHub
-
-1. Создайте пустой репозиторий на GitHub. В папке проекта выполните команды ниже, подставив адрес нового репозитория вместо `REMOTE_URL`. [Загрузка локального проекта на GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
-
-   ```powershell
-   git add -- .
-   git commit -m "Initial release of Violet Soundpad"
-   git branch -M main
-   git remote add origin REMOTE_URL
-   git push -u origin main
-   ```
-
-2. Процесс **Windows installer** в GitHub Actions собирает EXE и сохраняет его как артефакт. Возьмите установщик из артефакта или из локальной папки `artifacts`.
-3. Создайте релиз с тегом `v1.0.0` и прикрепите `VioletSoundpad-Setup-1.0.0.exe` в раздел Assets. [Создание релизов в GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
